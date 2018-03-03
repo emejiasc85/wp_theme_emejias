@@ -6059,14 +6059,16 @@ body {
   -moz-background-size: cover;
   background-size: cover;
   background-color: #4682b4; }
+  .header .navbar-light .navbar-toggler {
+    background: #e74c3c; }
   .header .navbar .brand {
-    color: white; }
+    color: white !important; }
     .header .navbar .brand:hover {
       color: #e74c3c;
       text-decoration: none;
       border-bottom: 1px solid transparent !important; }
   .header .navbar a {
-    color: white; }
+    color: white !important; }
     .header .navbar a:hover {
       color: #e74c3c;
       text-decoration: none;

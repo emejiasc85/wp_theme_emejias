@@ -16,6 +16,12 @@ if ( ! function_exists( 'emejias_setup' ) ) :
 	 * as indicating support for post thumbnails.
 	 */
 	function emejias_setup() {
+
+		// Include custom navwalker
+		require_once('bs4navwalker.php');
+
+		// Register WordPress nav menu
+		register_nav_menu('top', 'Top menu');
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.

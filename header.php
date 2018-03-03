@@ -24,37 +24,8 @@
 
 	  <header class="header">
             <div class="container">
-                <nav class="navbar navbar-expand-lg ">
-					<?php
-						if ( function_exists( 'the_custom_logo' ) ) {
-							the_custom_logo();
-						}
-					?>
-                    <a href="" class="brand ml-1"><?php bloginfo( 'name' ); ?></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                        <ul class="navbar-nav ml-auto ">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Servicios</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Proyectos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Planes</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contáctanos</a>
-                            </li>
-                            
-                        </ul>
-                    </div>
-                </nav>
+				<?php include TEMPLATEPATH ."/template-parts/nav.php"; ?>
+                
                 <div class="jumbotron">
                      <h1 class="display-4">Diseño y desarrollo Web</h1>
                     <p class="lead">Diseñamos y desarrollamos experiencias digitales. </p>
