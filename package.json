@@ -1,0 +1,30 @@
+{
+  "name": "emejias",
+  "version": "1.0.0",
+  "description": "our web site",
+  "main": "Gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Enrique Mejias",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.3",
+    "bootstrap": "^4.0.0",
+    "browser-sync": "^2.23.6",
+    "browserify": "^16.1.0",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^5.0.0",
+    "scrollreveal": "^3.3.6",
+    "vinyl-source-stream": "^2.0.0",
+    "yargs": "^11.0.0"
+  }
+}

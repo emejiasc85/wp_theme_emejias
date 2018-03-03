@@ -1,0 +1,118 @@
+body{
+	font-family: 'Open Sans', sans-serif !important;
+}
+.header{
+	//min-height: 40em;
+	background-image: url(./assets/img/2.jpg);
+	width: 100%;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-color: #4682b4;
+	//background-attachment: fixed;
+	.navbar {
+		.brand{
+			color:white;
+			&:hover{
+				color:#e74c3c;
+				text-decoration: none;
+				border-bottom: 1px solid transparent !important;
+			}
+		}
+		a{
+			color:white;
+			&:hover{
+				color:#e74c3c;
+				text-decoration: none;
+				border-bottom: 1px solid #e74c3c;
+			}
+
+		}
+	}
+}
+.porfolio{
+	.card{
+		background:transparent;
+	}
+}
+.btn-outline-rounded{
+	border-radius: 50px;
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+}
+.box-shadow{
+	box-shadow: 2px 1px 14px rgba(#888888, .4);
+	transition: all .3s ease-in-out;
+	&:hover {
+		transform: scale(1.05);
+		-webkit-box-shadow: 0 20px 35px 0 rgba(#888888, .5);
+		box-shadow: 0 20px 35px 0 rgba(#888888, .5);
+	}
+}
+.border-bottom-shadow{
+	box-shadow: 0 5px 6px -6px #888888;
+}
+
+.glyph-icon {
+	&:before{
+		//padding: 10px;
+		font-size: 64px !important;
+		display: block;
+		font-family: "Flaticon";
+		color: #e74c3c;
+		line-height: 1;
+		margin-left: 0 !important;
+		margin-bottom: .1em;
+		margin-top: .3em;
+	}
+}
+.glyph-footer-icon {
+	&:before{
+		//padding: 10px;
+		font-size: 2em !important;
+		display: block;
+		font-family: "Flaticon";
+		color: #e74c3c;
+		line-height: 1;
+		margin-left: 0 !important;
+		margin-bottom: .1em;
+		margin-top: .3em;
+	}
+}
+.glyph-super-icon {
+	&:before{
+		//padding: 10px;
+		font-size: 100px !important;
+		display: block;
+		font-family: "Flaticon";
+		color: #e74c3c;
+		line-height: 1;
+		margin-left: 0 !important;
+		margin-bottom: .1em;
+		margin-top: .3em;
+	}
+}
+.nav-window{
+	height: 1em ;
+	line-height: .7;
+	.nav-window-buttom{
+		width: .5em;
+		height: .5em;
+	}
+}
+
+//bootstrap theme
+
+.jumbotron{
+	margin-top: 2.5em;
+	background-color: transparent;
+	.display-4{
+		color:white;
+	}
+	.lead{
+		color:white;
+		
+	}
+}
+  
