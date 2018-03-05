@@ -10,7 +10,7 @@ body{
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
-    background-color: #4682b4;
+    background-color: black;
 	//background-attachment: fixed;
 	.navbar-light .navbar-toggler{
 		background: rgba(#e74c3c, 1);
@@ -110,12 +110,14 @@ body{
 .jumbotron{
 	margin-top: 2.5em;
 	background-color: transparent;
+	color:white;
 	.display-4{
 		color:white;
 	}
-	.lead{
-		color:white;
-		
+	.textwidget p{
+		font-size: 1.25rem;
+    	font-weight: 300;
 	}
+	
 }
   

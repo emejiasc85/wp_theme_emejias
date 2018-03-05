@@ -14,7 +14,7 @@ if ( ! function_exists( 'emejias_posted_on' ) ) :
 	function emejias_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+			$time_string = '<time class="updated" datetime="%3$s">%4$s</time>';
 		}
 
 		$time_string = sprintf( $time_string,
@@ -26,7 +26,7 @@ if ( ! function_exists( 'emejias_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'emejias' ),
+			esc_html_x( '%s', 'post date', 'emejias' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
@@ -42,7 +42,7 @@ if ( ! function_exists( 'emejias_posted_by' ) ) :
 	function emejias_posted_by() {
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author', 'emejias' ),
+			esc_html_x( 'por %s', 'post author', 'emejias' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
@@ -135,6 +135,7 @@ if ( ! function_exists( 'emejias_post_thumbnail' ) ) :
 		<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
 			<?php
 			the_post_thumbnail( 'post-thumbnail', array(
+				'class' => 'img-fluid',
 				'alt' => the_title_attribute( array(
 					'echo' => false,
 				) ),

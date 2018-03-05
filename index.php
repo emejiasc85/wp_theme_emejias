@@ -13,12 +13,16 @@
  */
 
 get_header();
+get_template_part( 'template-parts/services', 'services' );
 ?>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<div class="row bg-light mt-4  porfolio">
+	<div class="container">
+		<div class="mt-5 mb-5 border-bottom-shadow rounded-0">
+			<h4 class="text-uppercase font-weight-normal d-inline pr-3">Portafolio</h4>
+		</div>
 
 		<?php
+		query_posts( 'category_name=Portafolio&posts_per_page=10' );
 		if ( have_posts() ) :
 
 			if ( is_home() && ! is_front_page() ) :
@@ -34,10 +38,10 @@ get_header();
 				the_post();
 
 				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
+				* Include the Post-Type-specific template for the content.
+				* If you want to override this in a child theme, then include a file
+				* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+				*/
 				get_template_part( 'template-parts/content', get_post_type() );
 
 			endwhile;
@@ -50,10 +54,11 @@ get_header();
 
 		endif;
 		?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
+	</div>
+</div>
 <?php
-get_sidebar();
+
+//get_sidebar();
+get_template_part( 'template-parts/prices', 'prices' );
+
 get_footer();

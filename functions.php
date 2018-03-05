@@ -83,6 +83,19 @@ if ( ! function_exists( 'emejias_setup' ) ) :
 			]);
 		}
 		add_action('widgets_init', 'footer_logo' );
+		
+		function slogan()
+		{
+			register_sidebar([
+				'id'            => 'slogan',
+				'name'          => 'slogan',
+				'before_widget' => '<div>',
+				'after_widget'  => '</div>',
+				'before_title'  => '<h2 class="rounded">',
+				'after_title'   => '</h2>',
+			]);
+		}
+		add_action('widgets_init', 'slogan' );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
@@ -162,16 +175,14 @@ add_action( 'widgets_init', 'emejias_widgets_init' );
  * Enqueue scripts and styles.
  */
 function emejias_scripts() {
-	wp_enqueue_style( 'emejias-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'flaticon', get_template_directory_uri() . '/assets/fonts/flaticon/flaticon.css', array(), false, true );
-
-	wp_enqueue_script( 'emejias-navigation', get_template_directory_uri() . '/js/jquery-3.3.1.min.js', array(), '20151215', true );
-	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), false, true );
-	wp_enqueue_script( 'scrollreveal', get_template_directory_uri() . '/js/scrollreveal.min.js', array(), false, true );
+	wp_enqueue_style( 'google', 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800', array(), false, true );
+	wp_enqueue_style( 'flaticon', get_template_directory_uri() . '/assets/fonts/flaticon/flaticon.css' );
+	wp_enqueue_style( 'emejias-style', get_stylesheet_uri());
+	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery-3.3.1.min.js' );
+	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js' );
+	wp_enqueue_script( 'scrollreveal', get_template_directory_uri() . '/js/scrollreveal.min.js' );
 	//wp_enqueue_script( 'emejias-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
 	//wp_enqueue_script( 'emejias-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
