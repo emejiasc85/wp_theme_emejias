@@ -13,9 +13,29 @@
  */
 
 get_header();
+
+
+?> 
+	<header class="header" style="background-image: url(<?php echo( get_header_image() ); ?>);">
+		<div class="container">
+			<?php include TEMPLATEPATH ."/template-parts/nav.php"; ?>
+			<div class="jumbotron">
+				<h1 class="display-4"><?php echo get_bloginfo( 'description', 'display' ); ?></h1>
+				<?php  dynamic_sidebar('slogan'); ?>
+				<p class="lead">
+					<a class="btn btn btn-outline-danger btn-lg btn-outline-rounded" href="<?php echo get_permalink(27) ?>">Contáctanos</a>
+				</p>
+			</div>
+		</div>
+	</header>
+	<div id="content" class="site-content">
+
+
+<?php
+
 get_template_part( 'template-parts/services', 'services' );
 ?>
-<div class="row bg-light mt-4  porfolio">
+<div class="row bg-light mt-4 porfolio">
 	<div class="container">
 		<div class="mt-5 mb-5 border-bottom-shadow rounded-0">
 			<h4 class="text-uppercase font-weight-normal d-inline pr-3">Portafolio</h4>

@@ -6050,7 +6050,22 @@ a.text-dark:hover, a.text-dark:focus {
 body {
   font-family: 'Open Sans', sans-serif !important; }
 
+.header_before {
+  background-position: center !important; }
+  .header_before:before {
+    content: "";
+    display: block;
+    position: absolute;
+    /* Todas las posiciones a cero */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(4, 4, 4, 0.5);
+    /*Sepia*/ }
+
 .header {
+  position: relative;
   background-image: url(./assets/img/2.jpg);
   width: 100%;
   background-position: bottom center;
@@ -6092,6 +6107,16 @@ body {
 .border-bottom-shadow {
   box-shadow: 0 5px 6px -6px #888888; }
 
+.contact:before {
+  font-size: 2em !important;
+  display: block;
+  font-family: "Flaticon";
+  color: #e74c3c;
+  line-height: 1;
+  margin-left: 0 !important;
+  margin-bottom: .1em;
+  margin-top: .3em; }
+
 .glyph-icon:before {
   font-size: 64px !important;
   display: block;
@@ -6105,6 +6130,16 @@ body {
 .glyph-footer-icon:before {
   font-size: 2em !important;
   display: block;
+  font-family: "Flaticon";
+  color: #e74c3c;
+  line-height: 1;
+  margin-left: 0 !important;
+  margin-bottom: .1em;
+  margin-top: .3em; }
+
+.glyph-contact-icon:before {
+  font-size: 1.5em !important;
+  display: inline-block;
   font-family: "Flaticon";
   color: #e74c3c;
   line-height: 1;

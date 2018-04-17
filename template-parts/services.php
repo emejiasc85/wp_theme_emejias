@@ -20,7 +20,6 @@
         $pages = get_pages($args);
 
         foreach ($pages as $page) { ?>
-            
             <div class="card border-0 box-shadow bg-light rounded-0">
                 <div class="card-block p-4">
                     <i class="glyph-icon <?php echo $page->icon ?>"></i>

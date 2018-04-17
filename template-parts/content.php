@@ -10,12 +10,19 @@
 ?>
 
 
-
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article class="" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="card border-top-0 border-right-0 border-left-0 pb-1 mb-5 border-bottom-shadow rounded-0">
 		<div class="row">
+		<div class="col-md-6 order-md-2">
+				<div class="nav-window bg-secondary rounded-top pl-2">
+					<span class="nav-window-buttom rounded bg-light d-inline-block"></span>
+					<span class="nav-window-buttom rounded bg-light d-inline-block"></span>
+					<span class="nav-window-buttom rounded bg-light d-inline-block"></span>
+				</div>
+				<?php emejias_post_thumbnail(); ?>
+			</div>
 			<div class="col-md-6">
-				<div class="card-block">
+				<div class="card-block ml-2 pt-4">
 
 					<?php
 					if ( is_singular() ) :
@@ -59,32 +66,16 @@
 							?>
 						</div><!-- .entry-meta -->
 					<?php endif; ?>
+					<p>
 					<?php 
-						the_content( sprintf(
-							wp_kses(
-								/* translators: %s: Name of current post. Only visible to screen readers */
-								__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'emejias' ),
-								array(
-									'span' => array(
-										'class' => array(),
-									),
-								)
-							),
-							get_the_title()
-						) );
-				
-					?>
-					<a class="btn btn btn-outline-danger btn-outline-rounded btn-lg mt-3" href="<?php get_permalink() ?>" role="button">Ver proyecto</a>
+						echo $post->copy;
+						
+						?>
+						</p>
+					<a class="btn btn btn-outline-danger btn-outline-rounded btn-lg mt-3 mb-3" href="<?php the_permalink(); ?>">Ver proyecto</a>
 				</div>
 			</div>
-			<div class="col-md-6">
-				<div class="nav-window bg-secondary rounded-top pl-2">
-					<span class="nav-window-buttom rounded bg-light d-inline-block"></span>
-					<span class="nav-window-buttom rounded bg-light d-inline-block"></span>
-					<span class="nav-window-buttom rounded bg-light d-inline-block"></span>
-				</div>
-				<?php emejias_post_thumbnail(); ?>
-			</div>
+			
 		</div>
 		<?php 
 		wp_link_pages( array(

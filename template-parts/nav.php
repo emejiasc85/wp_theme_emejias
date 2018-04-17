@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light bg-faded">
+<nav class="navbar  navbar-expand-md navbar-light bg-faded">
 	<?php
 		if ( function_exists( 'the_custom_logo' ) ) {
 		the_custom_logo();

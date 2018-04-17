@@ -1,4 +1,4 @@
-<div class="container-fluid mb-3">
+<div class="container-fluid mb-3" id="plans">
             <section class="plan">
                     <div class="text-center mb-4">
                         <i class="glyph-icon flaticon-target"></i>
@@ -23,7 +23,7 @@
                                     <a href="#" class="list-group-item border-0">5 cuentas de correo eléctronico empresarial</a>
                                     <a href="#" class="list-group-item border-0">Diseño web personalizado</a>
                                     <div class="list-group-item border-0">
-                                        <button class="btn btn-outline-secondary btn-outline-rounded btn-lg btn-block text-truncate">Elegir plan</button>
+                                        <a href="<?php echo get_permalink(27) ?>" class="btn btn-outline-secondary btn-outline-rounded btn-lg btn-block text-truncate">Elegir plan</a href="<?php echo get_permalink(27) ?>">
                                     </div>
                                 </div>
                             </div>
@@ -45,7 +45,7 @@
                                     <a href="#" class="list-group-item border-0">Sesión fotografica empresarial</a>
                                     <a href="#" class="list-group-item border-0">CMS Wordpress</a>
                                     <div class="list-group-item border-0 bg-inverse">
-                                        <button class="btn btn-outline-success btn-outline-rounded btn-lg btn-block text-truncate">Elegir plan</button>
+                                        <a href="<?php echo get_permalink(27) ?>" class="btn btn-outline-success btn-outline-rounded btn-lg btn-block text-truncate">Elegir plan</a href="<?php echo get_permalink(27) ?>">
                                     </div>
                                 </div>
                             </div>
@@ -65,7 +65,7 @@
                                     </div>
                                     
                                     <div class="list-group-item border-0">
-                                        <button class="btn btn-outline-danger btn-outline-rounded btn-lg btn-block text-truncate">Contáctanos</button>
+                                        <a href="<?php echo get_permalink(27) ?>" class="btn btn-outline-danger btn-outline-rounded btn-lg btn-block text-truncate">Contáctanos</a href="<?php echo get_permalink(27) ?>">
                                     </div>
                                 </div>
                             </div>

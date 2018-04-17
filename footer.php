@@ -27,14 +27,14 @@
 				<div class="col-xs-12 col-sm-6 col-md-3 text-center">
 					<i class="glyph-footer-icon flaticon-envelope "></i>
 					<h5>Correo</h5>
-					<p>emejiasc85@gmail.com</p>  
+					<p><a href="mailto:emejiasc85@gmail.com.com?subject=Solicitud%20de%20cotizacion">emejiasc85@gmail.com</a></p>  
 				</div>
 				<div class="col-xs-12 col-sm-6 col-md-3 text-center">
 					<i class="glyph-footer-icon flaticon-phone-call"></i>
 					<h5>Teléfono</h5>   
-					<p>(502) 5460-6633</p> 
+					<p><a href="tel:5460-6633">(502) 5460-6633</a></p> 
 				</div>
-				<div class="col-xs-12 col-sm-6 col-md-3">
+				<div class="col-xs-12 col-sm-6 col-md-3 text-center text-md-left">
 					<h5>Visitar</h5>
 					<?php include TEMPLATEPATH . "/template-parts/nav-footer.php"; ?>  
 				</div>
