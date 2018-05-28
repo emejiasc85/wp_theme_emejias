@@ -13,7 +13,16 @@
 
 	</div><!-- #content -->
 	<footer class=" pt-md-5 border-top bg-dark text-white">
+		
 		<div class="container">
+			<form action="/" role="search" method="get">
+				<div class="input-group mb-3 input-group-lg">
+					<input type="search" name="s" class="form-control footer-input" placeholder="Escribe lo que deseas buscar" aria-label="Escribe lo que deseas busca" aria-describedby="basic-addon2">
+					<div class="input-group-append">
+						<button class="btn btn-outline-secondary" type="submit">Buscar</button>
+					</div>
+				</div>
+			</form>
 			<div class="row">
 				<div class="col-xs-12 col-sm-6 col-md-3 p-2 text-center">
 					<?php
