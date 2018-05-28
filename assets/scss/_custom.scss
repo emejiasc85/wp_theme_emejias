@@ -1,6 +1,8 @@
 body{
 	font-family: 'Open Sans', sans-serif !important;
 }
+
+
 .header_before{
 	background-position: center !important;
 	&:before{
@@ -145,6 +147,11 @@ body{
 		width: .5em;
 		height: .5em;
 	}
+}
+.footer-input{
+	background-color: #353a40 !important;
+	border: 1px solid #6c757d !important;
+	color: white !important
 }
 
 //bootstrap theme
