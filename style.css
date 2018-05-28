@@ -6164,6 +6164,11 @@ body {
     width: .5em;
     height: .5em; }
 
+.footer-input {
+  background-color: #353a40 !important;
+  border: 1px solid #6c757d !important;
+  color: white !important; }
+
 .jumbotron {
   margin-top: 2.5em;
   background-color: transparent;
