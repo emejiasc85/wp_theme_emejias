@@ -70,7 +70,17 @@ if ( ! function_exists( 'emejias_setup' ) ) :
 			add_theme_support( 'custom-logo', $defaults );
 		}
 		add_action( 'after_setup_theme', 'emejias_custom_logo_setup' );
+		add_filter( 'get_the_archive_title', function ( $title ) {
 
+			if( is_category() ) {
+		
+				$title = single_cat_title( '', false );
+		
+			}
+		
+			return $title;
+		
+		});
 		function footer_logo()
 		{
 			register_sidebar([
