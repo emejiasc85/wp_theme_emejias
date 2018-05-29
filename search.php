@@ -13,43 +13,42 @@ get_header();
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-		<?php if ( have_posts() ) : ?>
+			<header class="header" style="background-image: url(<?php echo( get_header_image() ); ?>);">
+				<div class="container">
+					<?php include TEMPLATEPATH ."/template-parts/nav.php"; ?>
+					<div class="jumbotron">
+						<h1 class="display-4">Resultados para: <strong> <?php echo get_search_query()?> </strong></h1>
+					</div>
+				</div>
+			</header>
+			<?php if ( have_posts() ) : ?>
+			<div class="container">
+				<?php
+				/* Start the Loop */
+				
+				while ( have_posts() ) :
+					the_post();
+					if (is_search() && ($post->post_type==’page’)) continue;
+					get_template_part( 'template-parts/content');
 
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'emejias' ), '<span>' . get_search_query() . '</span>' );
-					?>
-				</h1>
-			</header><!-- .page-header -->
+				endwhile;
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+				the_posts_navigation();
 
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
+			else :
 
-			endwhile;
+				get_template_part( 'template-parts/content', 'none' );
 
-			the_posts_navigation();
+			endif;
+			?>
 
-		else :
+			</div>
+			
 
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
 
 		</main><!-- #main -->
 	</section><!-- #primary -->
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();

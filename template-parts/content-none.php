@@ -36,7 +36,7 @@
 
 			<p class="text-center"><?php esc_html_e( 'Lo sentimos, no hemos encontrado lo que buscas. prueba con diferentes palabras.', 'emejias' ); ?></p>
 			<?php
-			get_search_form();
+			//get_search_form();
 
 		else :
 			?>

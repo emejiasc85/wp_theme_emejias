@@ -56,6 +56,16 @@ if ( ! function_exists( 'emejias_setup' ) ) :
 			]);
 		}
 		add_action('init', 'register_my_menu' );
+		add_filter( 'pre_get_posts','search_only_blog_posts' );
+
+		function search_only_blog_posts( $query ) {
+
+			if ( $query->is_search ) {
+
+				$query->set( 'post_type', 'post' );
+			}
+			return $query;
+		}
 		//set logo
 		add_theme_support( 'custom-logo' );
 

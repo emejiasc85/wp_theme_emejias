@@ -72,7 +72,7 @@
 						
 						?>
 						</p>
-					<a class="btn btn btn-outline-danger btn-outline-rounded btn-lg mt-3 mb-3" href="<?php the_permalink(); ?>">Ver proyecto</a>
+					<a class="btn btn btn-outline-danger btn-outline-rounded btn-lg mt-3 mb-3" href="<?php the_permalink(); ?>">Ver mas...</a>
 				</div>
 			</div>
 			
